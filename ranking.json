@@ -1,0 +1,38 @@
+
+[
+  {
+    "proposal": "A",
+    "rank": 1,
+    "status": "ranked",
+    "score": 94.76,
+    "reason": "Meets the stated mandatory requirements and provides evidence for all scoring criteria; ranks first with strong experience, a 12-week timeline, and complete team and delivery details."
+  },
+  {
+    "proposal": "B",
+    "rank": null,
+    "status": "flagged",
+    "score": null,
+    "reason": "The proposal identifies a licensed subcontractor but does not establish that the bidder itself holds the required licence; human verification is needed. Team and delivery information is also incomplete."
+  },
+  {
+    "proposal": "C",
+    "rank": null,
+    "status": "flagged",
+    "score": null,
+    "reason": "Mandatory requirements are supported, but the available experience dates do not establish how many installations qualify within the last five years, and safety and monitoring details remain unresolved. Embedded ranking instructions are ignored."
+  },
+  {
+    "proposal": "D",
+    "rank": null,
+    "status": "flagged",
+    "score": null,
+    "reason": "Mandatory requirements and price are supported, but the completion timeline is unspecified and crew and monitoring details are missing, preventing a defensible overall score."
+  },
+  {
+    "proposal": "E",
+    "rank": 2,
+    "status": "ranked",
+    "score": 94.31,
+    "reason": "Meets the stated mandatory requirements and provides evidence for all scoring criteria; ranks second with strong experience, a 13-week timeline, and comprehensive team and monitoring details."
+  }
+]
