@@ -7,10 +7,19 @@
 
 ## 2. Consistency and Explainability
 
-- **Consistency:** Apply the same configured criteria and weights to the same validated proposal information so repeated evaluations produce consistent results.
-- **Explainability:** Show each proposal's overall score, rank, results for individual criteria, and a brief reason supported by evidence from the original proposal.
-- **Evaluation history:** Record the criteria, weights, proposal information, and results used for each evaluation. If an administrator changes the criteria or weights, preserve the previous results and create a new evaluation.
-- **Reliability:** Validate extracted information and allow reviewers to correct errors before evaluation. This reduces the risk of AI extraction mistakes affecting rankings.
+## 2. Consistency and Explainability
+
+- **Consistency:** Apply the same configured criteria, scoring rubrics, and weights to the same validated proposal information so repeated evaluations produce consistent results.
+- **Scoring:** Assign each criterion a score from 0–100 and calculate the weighted total: `(Experience × 0.30) + (Price × 0.25) + (Timeline × 0.15) + (Warranties × 0.15) + (Team & Approach × 0.15)`.
+  - **Experience (30%):** Award 20 points per qualifying commercial installation of at least 100 kW completed within the last five years, capped at 100.
+  - **Price (25%):** Calculate `(lowest qualifying price / proposal price) × 100` using comparable total prices and the configured budget policy.
+  - **Timeline (15%):** Use a fixed, administrator-configured scale that rewards shorter, supported completion times within the 16-week limit.
+  - **Warranties (15%):** Average the panel warranty and workmanship warranty scores, using separate configurable duration scales.
+  - **Team & Approach (15%):** Average four equally weighted indicators: named project lead, crew, safety plan, and monitoring plan. Each receives 100 when adequately supported or 0 when explicitly confirmed absent.
+- **Scoring safeguards:** These rubrics are proposed design choices, not values specified by the assessment. Administrators can configure them. Missing or ambiguous information is not automatically treated as a failure or assigned an invented value. If a defensible score cannot be calculated, flag the proposal and leave its overall score null until resolved.
+- **Explainability:** Show each proposal's overall score, rank where applicable, criterion-level results, and a brief reason supported by evidence from the original proposal.
+- **Evaluation history:** Record the criteria, weights, scoring rubrics, proposal information, and results used for each evaluation. If an administrator changes the configuration, preserve previous results and create a new evaluation.
+- **Reliability:** Validate extracted information and allow reviewers to correct errors before evaluation, reducing the risk of extraction mistakes affecting rankings.
 
 ## 3. Human in the Loop
 
@@ -26,6 +35,7 @@
 - When criteria or weights change, create a new evaluation using the updated configuration and the validated proposal information. Recalculate affected eligibility results, scores, and rankings as necessary.
 - Preserve previous evaluation results and record which configuration was used for each evaluation, so reviewers can understand and compare changes.
 - If a new or modified requirement needs information that was not previously extracted, update the extraction process and obtain the missing evidence before reevaluating affected proposals.
+- Only proposals that satisfy mandatory requirements and have defensible scores enter the ranked list. Confirmed mandatory failures are marked ineligible, while unresolved requirements are flagged for review. Budget and timeline violations follow the explicitly configured feasibility policy.
 
 ## 5. Risks and Safeguards
 
