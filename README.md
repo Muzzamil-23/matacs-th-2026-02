@@ -15,7 +15,7 @@ This repository contains my design for an AI-assisted contractor proposal evalua
 - [AI Extraction Prompt](PROMPTS.md) — The extraction prompt, expected output structure, backend processing approach, and design rationale.
 - [Expected Ranking](ranking.json) — Expected ranking results, proposal statuses, scores where defensible, and explanations.
 - [System Workflow Diagram](diagram/system-workflow.png) — End-to-end process from administrator configuration and proposal upload to evaluation and human review.
-- [AI Extraction and Validation Diagram](diagram/ai-extraction-validation.png) — Details of the extraction, validation, and human-review process.
+- [AI Extraction and Validation Diagram](diagram/ai_extraction_validation.png) — Details of the extraction, validation, and human-review process.
 
 ## AI Tool Usage
 
