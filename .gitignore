@@ -1,0 +1,6 @@
+# Prototype environment
+prototype/.venv/
+prototype/.env
+prototype/samples/
+prototype/extractions/
+prototype/__pycache__/
