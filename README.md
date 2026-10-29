@@ -29,3 +29,19 @@ I used ChatGPT to discuss the system design, refine the extraction prompt, and d
 - Flag uncertainty for human review and preserve an auditable evaluation history.
 - Keep evaluation criteria, scoring rubrics, and weights administrator-configurable.
 
+
+### Optional Prototype
+
+The prototype demonstrates AI-assisted extraction using the assessment's proposal extraction prompt and the Gemini API. It reads a local proposal text file, requests structured JSON containing extracted facts, evidence, and uncertainty statuses, performs basic response validation, and saves the result locally.
+
+**Run locally:**
+
+1. Install the dependencies listed in `prototype/requirements.txt`.
+2. Set `GEMINI_API_KEY` in `prototype/.env`.
+3. Place a proposal text file in `prototype/samples/`.
+4. From the `prototype/` directory, run:
+
+   `python run_extraction.py samples/A.txt`
+
+The prototype demonstrates extraction only. It does not independently verify contractor claims or make eligibility, scoring, or ranking decisions. Sample documents and generated extraction outputs are excluded from the repository.
+
